@@ -1,0 +1,38 @@
+.mainMenu {
+    flex-direction: column;
+    background-color: #FB6B6B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    width: 136px;
+    height: 161px;
+}
+
+h1{
+    font-family: Righteous;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    margin: 60px 0;
+}
+
+.startRecall {
+    width: 246px;
+    height: 54px;
+    border-radius: 5px;
+    border: 1px solid #d70900;
+    box-shadow: 0px 4px 4px 0px #00000026;
+    background-color: white;
+    color: #d70900;
+    font-size: 18px;
+    font-family: Recursive;
+    font-weight: 400;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
