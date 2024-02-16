@@ -1,6 +1,7 @@
 .card {
     width: 567px;
     height: 82px;
+    min-height: 82px;
     background-color: white;
     font-family: Recursive;
     text-align: left;
@@ -8,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 21.7px;
+    margin-bottom: 15px;
 }
 
 .card ion-icon {
@@ -15,14 +17,30 @@
     height: 36.7px;
 }
 
+.card ion-icon:hover {
+    cursor: pointer;
+}
+
 .questionText {
     font-size: 18px;
     font-weight: 400;
+    overflow-y: hidden;
 }
 
 .card p{
     font-size: 24px;
     font-weight: 700;
+    overflow-y: hidden;
+}
+
+.dispNone {
+    display: none;
+}
+
+.card.open {
+    height: 164px;
+    align-items: flex-start;
+    padding-top: 18px;
 }
 
 
@@ -33,6 +51,7 @@
     height: 65px;
     font-size: 16px;
     padding: 0 15px;
+    margin-bottom: 15px;
 }
 
 .card ion-icon {
@@ -42,12 +61,17 @@
 
 .questionText {
     font-size: 18px;
-    font-weight: 400;
 }
 
 .card p{
     font-size: 16px;
-    font-weight: 700;
 }
 
+.card.open {
+    height: 130px;
 }
+
+
+}
+
+
