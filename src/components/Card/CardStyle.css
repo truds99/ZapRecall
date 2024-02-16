@@ -10,11 +10,22 @@
     align-items: center;
     padding: 0 21.7px;
     margin-bottom: 15px;
+    position: relative;
 }
 
-.card ion-icon {
+.card .play {
     width: 31.7px;
     height: 36.7px;
+}
+
+.arrow {
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    bottom: 6px;
+    right: 15px;
+    color: black;
+    visibility: visible;
 }
 
 .card ion-icon:hover {
@@ -54,9 +65,9 @@
     margin-bottom: 15px;
 }
 
-.card ion-icon {
-    width: 20px;
-    height: 23px;
+.card .play {
+    width: 25px;
+    height: 30px;
 }
 
 .questionText {
@@ -71,6 +82,12 @@
     height: 130px;
 }
 
+.arrow {
+    width: 39px;
+    height: 24px;
+    bottom: 6px;
+    right: 4px;
+}
 
 }
 
