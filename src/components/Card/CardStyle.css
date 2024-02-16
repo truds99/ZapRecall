@@ -1,0 +1,36 @@
+.card {
+    width: 567px;
+    height: 82px;
+    background-color: white;
+    font-family: Recursive;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 21.7px;
+}
+
+.card ion-icon {
+    width: 31.7px;
+    height: 36.7px;
+}
+
+
+
+@media (max-width: 800px) {
+
+.card {
+    width: 300px;
+    height: 65px;
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+.card ion-icon {
+    width: 20px;
+    height: 23px;
+}
+
+}

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainMenu from './MainMenu/MainMenu';
-import Content from './Content'
+import Content from './Content/Content'
 import '../reset.css'
 
 
