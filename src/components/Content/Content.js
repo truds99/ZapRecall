@@ -14,7 +14,7 @@ const flashCards = [
   },
   {
     question: 'Usamos estado (state) para:',
-    answer: 'Dizer para o React quais informações, quando atualizadas, devem renderizar a tela novamente.'
+    answer: 'Renderizar informações atualizadas.'
   },
   {
     question: 'Usamos o npm para:',
@@ -22,11 +22,11 @@ const flashCards = [
   },
   {
     question: 'O React é',
-    answer: 'Uma biblioteca JavaScript para construção de interfaces'
+    answer: 'Uma biblioteca JavaScript para construção de interfaces.'
   },
   {
     question: 'Componentes devem iniciar com',
-    answer: 'Letra maiúscula'
+    answer: 'Letra maiúscula.'
   },
   {
     question: 'Podemos colocar ____ dentro do JSX',
