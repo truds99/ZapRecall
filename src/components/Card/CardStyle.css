@@ -1,6 +1,6 @@
 .card {
     width: 567px;
-    height: 82px;
+    height: 108px;
     min-height: 82px;
     background-color: white;
     font-family: Recursive;
@@ -28,6 +28,11 @@
     visibility: visible;
 }
 
+.card.open.tapped {
+    flex-direction: column;
+    align-items: center;
+}
+
 .card ion-icon:hover {
     cursor: pointer;
 }
@@ -36,7 +41,8 @@
     font-size: 18px;
     font-weight: 400;
     overflow-y: hidden;
-    height: 100%;
+    max-height: 100%;
+    hyphens: auto;
 }
 
 .card p{
@@ -56,6 +62,12 @@
     padding-top: 18px;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+}
 
 @media (max-width: 800px) {
 

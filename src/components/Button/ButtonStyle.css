@@ -1,0 +1,27 @@
+.red {
+    background-color: #FF3030;
+}
+
+.yellow {
+    background-color: #FF922E;
+}
+
+.green {
+    background-color: #2FBE34;
+}
+
+.button {
+    width:85.17px;
+    height:37.17px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Recursive;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    text-align: center;
+    overflow: hidden;
+}
