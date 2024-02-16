@@ -42,7 +42,7 @@ flashCards.sort(() => Math.random() - 0.5);
 
 export default function Content () {
 
-  const [hits, setHits] = React.useState(0);
+  const [done, setDone] = React.useState(0);
 
     return (
         <div className='content'>
@@ -57,7 +57,7 @@ export default function Content () {
                 <Card item={flashCards[3]} key={3} numb={4}/>
             </div>
             <div className='bottom'>
-                {hits}/4 DONE
+                {done}/4 DONE
             </div>
         </div>
     )
