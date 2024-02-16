@@ -11,9 +11,9 @@
 }
 
 .button {
-    width:85.17px;
-    height:37.17px;
-    font-size: 12px;
+    width:170px;
+    height:72px;
+    font-size: 16px;
     font-weight: 400;
     font-family: Recursive;
     color: white;
@@ -24,4 +24,15 @@
     margin-bottom: 6px;
     text-align: center;
     overflow: hidden;
+}
+
+@media (max-width: 600px) {
+
+.button {
+    width:85.17px;
+    height:37.17px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
 }

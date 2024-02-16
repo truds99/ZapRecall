@@ -37,10 +37,10 @@
 }
 
 .questionText {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     overflow-y: hidden;
-    min-height: 26px;
+    min-height: 28px;
     hyphens: auto;
 }
 
