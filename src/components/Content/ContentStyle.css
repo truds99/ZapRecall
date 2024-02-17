@@ -45,7 +45,7 @@ ion-icon.textgreen {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-bottom: 117px;
+    margin-bottom: 217px;
 }
 
 .title {
@@ -69,25 +69,8 @@ ion-icon.textgreen {
     height: 87px;
 }
 
-.bottom {
-    background-color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    color: #333333;
-    width: 100vw;
-    height: 102px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    font-size: 32px;
-    font-family: Recursive;
-}
 
-.icons {
-    display: flex;
-}
+
 
 @media (max-width: 800px) {
 
@@ -104,10 +87,6 @@ ion-icon.textgreen {
     height: 60px;
 }
 
-.bottom {
-    height: 70px;   
-    font-size: 22px;
-}
 
 .cards {
     height: 530px;

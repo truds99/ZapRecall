@@ -42,11 +42,41 @@ ion-icon.textgreen {
     display: flex;
 }
 
+.bottom img {
+    height: 35px;
+    width: 35px;
+    margin-right: 8px;
+}
+
+.messageTitle {
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
+    align-items: center;
+}
+
+.bottom.yes, .bottom.no {
+    height: 171px;
+    justify-content: space-around;
+}
+
+.bottom .messageText {
+    font-size: 28px;
+    min-height: 31px;
+}
+
 @media (max-width: 800px) {
 
 .bottom {
     height: 70px;   
     font-size: 22px;
 }
+
+.bottom .messageText {
+    font-size: 19.5px;
+    min-height: 22px;
+}
+
 
 }

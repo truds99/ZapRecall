@@ -51,7 +51,7 @@ export default function Content () {
   
   if(done === 4) {
       icons.includes(<ion-icon class="textred" name="close-circle"></ion-icon>) ?
-        allRight = 'not' : allRight = 'yes'; 
+        allRight = 'no' : allRight = 'yes'; 
   }
 
     return (
