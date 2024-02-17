@@ -12,6 +12,39 @@
     position: relative;
 }
 
+.card.textred p{
+    color: #FF3030;
+    text-decoration: line-through;
+}
+
+.card.textyellow p {
+    color: #FF922E;
+    text-decoration: line-through;
+}
+
+.card.textgreen p {
+    color: #2FBE34;
+    text-decoration: line-through;
+}
+
+ion-icon.textred{
+    color: #FF3030;
+    height: 30px;
+    width: 30px;
+}
+
+ion-icon.textyellow {
+    color: #FF922E;
+    height: 30px;
+    width: 30px;
+}
+
+ion-icon.textgreen {
+    color: #2FBE34;
+    height: 30px;
+    width: 30px;
+}
+
 .card .play {
     width: 31.7px;
     height: 36.7px;
@@ -42,13 +75,15 @@
     overflow-y: hidden;
     min-height: 28px;
     hyphens: auto;
+    font-family: Recursive;
 }
 
 .card p{
     font-size: 24px;
     font-weight: 700;
     overflow-y: hidden;
-    
+    color: #333333;
+    font-family: Recursive;
 }
 
 .dispNone {
@@ -81,6 +116,7 @@
 .card .play {
     width: 25px;
     height: 30px;
+    margin-right: 4px;
 }
 
 .questionText {
