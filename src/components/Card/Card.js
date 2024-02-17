@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 import { useState, useEffect } from 'react';
 
 
-export default function Card ({item, numb, done, setDone, icons, setIcons}) {
+export default function Card ({item, numb, done, setDone, icons, setIcons, setAllRight}) {
 
     const [isOpen, setIsOpen] = useState(false);
     const [isTapped, setIsTapped] = useState(false);
@@ -15,7 +15,10 @@ export default function Card ({item, numb, done, setDone, icons, setIcons}) {
         if (isAnswered) {
           setIcons([...icons, <ion-icon key={icons.length} class={`text${isRight}`} name={isRight === "red" ? "close-circle" : isRight === "yellow" ? "help-circle" : "checkmark-circle"}></ion-icon>]);
         }
-      }, [isAnswered]);
+        if (isRight === 'red') {
+            setAllRight(false);
+        }
+      }, [isAnswered, isRight]);
 
     return (
         isOpen ?

@@ -46,27 +46,22 @@ export default function Content () {
 
   const [done, setDone] = useState(0);
   const [icons, setIcons] = useState([]);
-  let allRight = ""
-
+  const [allRight, setAllRight] = useState(true);
   
-  if(done === 4) {
-      icons.includes(<ion-icon class="textred" name="close-circle"></ion-icon>) ?
-        allRight = 'no' : allRight = 'yes'; 
-  }
-
-    return (
-        <div className='content'>
-            <div className='title'>
-                <img src={logo}/>
-                <h1>ZapRecall</h1>
-            </div>
-            <div className='cards'>
-                <Card item={flashCards[0]} key={0} numb={1} done={done} setDone={setDone} icons={icons} setIcons={setIcons}/>
-                <Card item={flashCards[1]} key={1} numb={2} done={done} setDone={setDone} icons={icons} setIcons={setIcons}/>
-                <Card item={flashCards[2]} key={2} numb={3} done={done} setDone={setDone} icons={icons} setIcons={setIcons}/>
-                <Card item={flashCards[3]} key={3} numb={4} done={done} setDone={setDone} icons={icons} setIcons={setIcons}/>
-            </div>
-            <Bottom done={done} allRight={allRight} icons={icons}/>
-        </div>
-    )
+  
+  return (
+      <div className='content'>
+          <div className='title'>
+              <img src={logo}/>
+              <h1>ZapRecall</h1>
+          </div>
+          <div className='cards'>
+              <Card item={flashCards[0]} key={0} numb={1} done={done} setDone={setDone} icons={icons} setIcons={setIcons} setAllRight={setAllRight}/>
+              <Card item={flashCards[1]} key={1} numb={2} done={done} setDone={setDone} icons={icons} setIcons={setIcons} setAllRight={setAllRight}/>
+              <Card item={flashCards[2]} key={2} numb={3} done={done} setDone={setDone} icons={icons} setIcons={setIcons} setAllRight={setAllRight}/>
+              <Card item={flashCards[3]} key={3} numb={4} done={done} setDone={setDone} icons={icons} setIcons={setIcons} setAllRight={setAllRight}/>
+          </div>
+          <Bottom done={done} allRight={allRight} icons={icons}/>
+      </div>
+  )
 }

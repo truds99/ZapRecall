@@ -4,10 +4,12 @@ import emojiWrong from '../../assets/sad.png'
 
 
 export default function Bottom({done, allRight, icons}){
+    
+
     return (
-        <div className={`bottom ${allRight}`}>
+        <div className={`bottom ${done === 4 ? "bigger" : ''}`}>
             {done === 4 ? 
-                (allRight === 'yes' ?
+                (allRight ?
                     <><div className='messageTitle'>
                         <img src={emojiRigth}></img>
                         Congratulations!
@@ -18,7 +20,7 @@ export default function Bottom({done, allRight, icons}){
                         <img src={emojiWrong}></img>
                         Well, not this time.
                     </div>
-                    <p className='messageText'>There's still some left, but don't give up.</p>
+                    <p className='messageText someLeft'>There's still some left, but don't give up.</p>
                     </>
                 ) : ''}
             {done}/4 DONE
