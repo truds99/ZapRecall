@@ -30,13 +30,14 @@
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
 .button {
     width:85.17px;
     height:37.17px;
     font-size: 12px;
     font-weight: 400;
+    max-width: 28%;
 }
 
 }

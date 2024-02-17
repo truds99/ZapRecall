@@ -11,6 +11,24 @@ body {
     margin-bottom: 20px;
 }
 
+ion-icon.textred{
+    color: #FF3030;
+    height: 35px;
+    width: 35px;
+}
+
+ion-icon.textyellow {
+    color: #FF922E;
+    height: 35px;
+    width: 35px;
+}
+
+ion-icon.textgreen {
+    color: #2FBE34;
+    height: 35px;
+    width: 35px;
+}
+
 * {
     overflow-x: hidden;
     box-sizing: border-box;
@@ -35,7 +53,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 80%;
+    width: 85%;
     max-width: 500px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -60,10 +78,15 @@ body {
     width: 100vw;
     height: 102px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;    
     font-size: 32px;
     font-family: Recursive;
+}
+
+.icons {
+    display: flex;
 }
 
 @media (max-width: 800px) {
@@ -83,7 +106,7 @@ body {
 
 .bottom {
     height: 70px;   
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .cards {

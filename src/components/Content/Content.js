@@ -2,6 +2,7 @@ import './ContentStyle.css';
 import Card from '../Card/Card'
 import logo from '../../assets/logo-pequeno.png'
 import React from 'react';
+import { useState } from 'react';
 
 const flashCards = [
   {
@@ -42,7 +43,8 @@ flashCards.sort(() => Math.random() - 0.5);
 
 export default function Content () {
 
-  const [done, setDone] = React.useState(0);
+  const [done, setDone] = useState(0);
+  const [icons, setIcons] = useState([]);
 
     return (
         <div className='content'>
@@ -51,13 +53,14 @@ export default function Content () {
                 <h1>ZapRecall</h1>
             </div>
             <div className='cards'>
-                <Card item={flashCards[0]} key={0} numb={1} done={done} setDone={setDone}/>
-                <Card item={flashCards[1]} key={1} numb={2} done={done} setDone={setDone}/>
-                <Card item={flashCards[2]} key={2} numb={3} done={done} setDone={setDone}/>
-                <Card item={flashCards[3]} key={3} numb={4} done={done} setDone={setDone}/>
+                <Card item={flashCards[0]} key={0} numb={1} done={done} setDone={setDone} icons={icons} setIcons={setIcons}/>
+                <Card item={flashCards[1]} key={1} numb={2} done={done} setDone={setDone} icons={icons} setIcons={setIcons}/>
+                <Card item={flashCards[2]} key={2} numb={3} done={done} setDone={setDone} icons={icons} setIcons={setIcons}/>
+                <Card item={flashCards[3]} key={3} numb={4} done={done} setDone={setDone} icons={icons} setIcons={setIcons}/>
             </div>
             <div className='bottom'>
                 {done}/4 DONE
+                {icons ? <div className='icons'>{icons}</div> : ''}
             </div>
         </div>
     )
