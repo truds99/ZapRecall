@@ -2,6 +2,7 @@ import './ContentStyle.css';
 import Card from '../Card/Card'
 import logo from '../../assets/logo-pequeno.png'
 import React from 'react';
+import Bottom from '../Bottom/Bottom';
 import { useState } from 'react';
 
 const flashCards = [
@@ -45,6 +46,13 @@ export default function Content () {
 
   const [done, setDone] = useState(0);
   const [icons, setIcons] = useState([]);
+  let allRight = ""
+
+  
+  if(done === 4) {
+      icons.includes(<ion-icon class="textred" name="close-circle"></ion-icon>) ?
+        allRight = 'not' : allRight = 'yes'; 
+  }
 
     return (
         <div className='content'>
@@ -58,10 +66,7 @@ export default function Content () {
                 <Card item={flashCards[2]} key={2} numb={3} done={done} setDone={setDone} icons={icons} setIcons={setIcons}/>
                 <Card item={flashCards[3]} key={3} numb={4} done={done} setDone={setDone} icons={icons} setIcons={setIcons}/>
             </div>
-            <div className='bottom'>
-                {done}/4 DONE
-                {icons ? <div className='icons'>{icons}</div> : ''}
-            </div>
+            <Bottom done={done} allRight={allRight} icons={icons}/>
         </div>
     )
 }
