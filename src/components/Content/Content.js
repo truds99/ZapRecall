@@ -51,10 +51,10 @@ export default function Content () {
                 <h1>ZapRecall</h1>
             </div>
             <div className='cards'>
-                <Card item={flashCards[0]} key={0} numb={1}/>
-                <Card item={flashCards[1]} key={1} numb={2}/>
-                <Card item={flashCards[2]} key={2} numb={3}/>
-                <Card item={flashCards[3]} key={3} numb={4}/>
+                <Card item={flashCards[0]} key={0} numb={1} done={done} setDone={setDone}/>
+                <Card item={flashCards[1]} key={1} numb={2} done={done} setDone={setDone}/>
+                <Card item={flashCards[2]} key={2} numb={3} done={done} setDone={setDone}/>
+                <Card item={flashCards[3]} key={3} numb={4} done={done} setDone={setDone}/>
             </div>
             <div className='bottom'>
                 {done}/4 DONE

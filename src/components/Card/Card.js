@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '../Button/Button'
 
 
-export default function Card ({item, numb}) {
+export default function Card ({item, numb, done, setDone}) {
 
     const [isOpen, setIsOpen] = React.useState(false);
     const [isTapped, setIsTapped] = React.useState(false);
@@ -14,9 +14,9 @@ export default function Card ({item, numb}) {
                 <div className="card open tapped">
                     <div className="questionText">{item.answer}</div>
                     <div className='buttons'>
-                        <Button color={"red"} text={"I didn't remember"} />
-                        <Button color={"yellow"} text={"Almost didn't remember"} />
-                        <Button color={"green"} text={"Zap!"} />
+                        <Button color={"red"} text={"I didn't remember"} done={done} setDone={setDone}/>
+                        <Button color={"yellow"} text={"Almost didn't remember"} done={done} setDone={setDone}/>
+                        <Button color={"green"} text={"Zap!"} done={done} setDone={setDone}/>
                     </div>
                 </div>:
                 <div className="card open">
