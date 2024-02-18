@@ -65,10 +65,6 @@ export default function Content ({ validValue, setValidValue, selectedDeck }) {
           </div>
           <div className='cards'>
               {selectedDeck.map((elm, idx) => <Card item={elm} key={idx} numb={idx+1} done={done} setDone={setDone} icons={icons} setIcons={setIcons} validValue={validValue} countHits={countHits} setCountHits={setCountHits}/>)}
-              {/* <Card item={selectedDeck[0]} key={0} numb={1} done={done} setDone={setDone} icons={icons} setIcons={setIcons} validValue={validValue} countHits={countHits} setCountHits={setCountHits}/>
-              <Card item={selectedDeck[1]} key={1} numb={2} done={done} setDone={setDone} icons={icons} setIcons={setIcons} validValue={validValue} countHits={countHits} setCountHits={setCountHits}/>
-              <Card item={selectedDeck[2]} key={2} numb={3} done={done} setDone={setDone} icons={icons} setIcons={setIcons} validValue={validValue} countHits={countHits} setCountHits={setCountHits}/>
-              <Card item={selectedDeck[3]} key={3} numb={4} done={done} setDone={setDone} icons={icons} setIcons={setIcons} validValue={validValue} countHits={countHits} setCountHits={setCountHits}/> */}
           </div>
           <Bottom done={done} icons={icons} setDone={setDone} setIcons={setIcons} cards={selectedDeck} validValue={validValue} countHits={countHits}/>
       </div>
