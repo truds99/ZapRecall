@@ -19,9 +19,9 @@ const [inputValue, setInputValue] = useState('');
   function handleChange(event) {
     const enteredValue = event.target.value;
     setInputValue((prevValue) => {
-      setInputValue(enteredValue);
-      setGoalsIsValid(enteredValue > 0 && enteredValue < 5 && enteredValue % 1 === 0);
-      return enteredValue;
+        setInputValue(enteredValue);
+        setGoalsIsValid(enteredValue > 0 && enteredValue < 5 && enteredValue % 1 === 0);
+        return enteredValue;
     });
   }
 

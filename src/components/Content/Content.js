@@ -3,7 +3,7 @@ import Card from '../Card/Card'
 import logo from '../../assets/logo-pequeno.png'
 import React from 'react';
 import Bottom from '../Bottom/Bottom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const flashCards = [
   {
@@ -43,7 +43,14 @@ const flashCards = [
 flashCards.sort(() => Math.random() - 0.5);
 
 
-export default function Content ({ validValue }) {
+export default function Content ({ validValue, setValidValue }) {
+
+  useEffect (() => {
+    if(!validValue) {
+      setValidValue(4);
+    }
+  }, [validValue]);
+  
 
   const [done, setDone] = useState(0);
   const [icons, setIcons] = useState([]);

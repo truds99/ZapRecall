@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
           <Route path='/' element={<MainMenu setValidValue={setValidValue}/>}/>
-          <Route path='/content' element={<Content validValue={validValue}/>}/>
+          <Route path='/content' element={<Content validValue={validValue} setValidValue={setValidValue}/>}/>
       </Routes>
     </BrowserRouter>
   );

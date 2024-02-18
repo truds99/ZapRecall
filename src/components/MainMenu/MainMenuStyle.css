@@ -34,11 +34,15 @@ h1{
 
 .goals::placeholder {
     color: #6e6e6e;
+    font-family: Recursive;
 }
 
 .goals:focus {
     border: none;
     outline: none;
+    color: #FB6B6B;
+    font-family: Recursive;
+    font-weight: 700;
 }
 
 .startRecall {
