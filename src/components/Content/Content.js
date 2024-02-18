@@ -51,7 +51,7 @@ export default function Content ({ validValue, setValidValue, selectedDeck }) {
     if(!validValue) {
       setValidValue(4);
     }
-  }, [validValue, selectedDeck]);
+  }, [validValue]);
   
   const [done, setDone] = useState(0);
   const [icons, setIcons] = useState([]);
