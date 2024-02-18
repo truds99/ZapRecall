@@ -9,13 +9,14 @@ import { useState } from 'react';
 function App() {
 
   const [validValue, setValidValue] = useState('');
+  const [validDeck, setValidDeck] = useState('');
 
 
   return (
     <BrowserRouter>
       <Routes>
-          <Route path='/' element={<MainMenu setValidValue={setValidValue}/>}/>
-          <Route path='/content' element={<Content validValue={validValue} setValidValue={setValidValue}/>}/>
+          <Route path='/' element={<MainMenu setValidValue={setValidValue} setValidDeck={setValidDeck}/>}/>
+          <Route path='/content' element={<Content validValue={validValue} setValidValue={setValidValue} validDeck={validDeck} setValidDeck={setValidDeck}/>}/>
       </Routes>
     </BrowserRouter>
   );
