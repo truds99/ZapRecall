@@ -31,18 +31,21 @@ ion-icon.textred{
     color: #FF3030;
     height: 30px;
     width: 30px;
+    cursor:auto;
 }
 
 ion-icon.textyellow {
     color: #FF922E;
     height: 30px;
     width: 30px;
+    cursor:default;
 }
 
 ion-icon.textgreen {
     color: #2FBE34;
     height: 30px;
     width: 30px;
+    cursor:auto;
 }
 
 .card .play {

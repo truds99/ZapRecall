@@ -56,8 +56,21 @@ ion-icon.textgreen {
     align-items: center;
 }
 
+.bottom .button{
+    width: 167px;
+    height: 32px;
+    min-width: 167px;
+    border-radius: 5px;
+    font-family: Recursive;
+    background-color: #FB6B6B;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+
 .bottom.bigger {
-    height: 171px;
+    height: 244px;
     justify-content: space-around;
 }
 

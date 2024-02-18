@@ -42,13 +42,13 @@ const flashCards = [
 
 flashCards.sort(() => Math.random() - 0.5);
 
-export default function Content () {
+
+export default function Content ({ validValue }) {
 
   const [done, setDone] = useState(0);
   const [icons, setIcons] = useState([]);
   const [allRight, setAllRight] = useState(true);
-  
-  
+
   return (
       <div className='content'>
           <div className='title'>
@@ -61,7 +61,10 @@ export default function Content () {
               <Card item={flashCards[2]} key={2} numb={3} done={done} setDone={setDone} icons={icons} setIcons={setIcons} setAllRight={setAllRight}/>
               <Card item={flashCards[3]} key={3} numb={4} done={done} setDone={setDone} icons={icons} setIcons={setIcons} setAllRight={setAllRight}/>
           </div>
-          <Bottom done={done} allRight={allRight} icons={icons}/>
+          <Bottom done={done} allRight={allRight} icons={icons} setDone={setDone} setIcons={setIcons} setAllRight={setAllRight} cards={flashCards}/>
       </div>
   )
 }
+
+
+
