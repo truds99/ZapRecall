@@ -47,7 +47,7 @@ export default function Content ({ validValue }) {
 
   const [done, setDone] = useState(0);
   const [icons, setIcons] = useState([]);
-  const [allRight, setAllRight] = useState(true);
+  const [countHits, setCountHits] = useState(0);
 
   return (
       <div className='content'>
@@ -56,12 +56,12 @@ export default function Content ({ validValue }) {
               <h1>ZapRecall</h1>
           </div>
           <div className='cards'>
-              <Card item={flashCards[0]} key={0} numb={1} done={done} setDone={setDone} icons={icons} setIcons={setIcons} setAllRight={setAllRight}/>
-              <Card item={flashCards[1]} key={1} numb={2} done={done} setDone={setDone} icons={icons} setIcons={setIcons} setAllRight={setAllRight}/>
-              <Card item={flashCards[2]} key={2} numb={3} done={done} setDone={setDone} icons={icons} setIcons={setIcons} setAllRight={setAllRight}/>
-              <Card item={flashCards[3]} key={3} numb={4} done={done} setDone={setDone} icons={icons} setIcons={setIcons} setAllRight={setAllRight}/>
+              <Card item={flashCards[0]} key={0} numb={1} done={done} setDone={setDone} icons={icons} setIcons={setIcons} validValue={validValue} countHits={countHits} setCountHits={setCountHits}/>
+              <Card item={flashCards[1]} key={1} numb={2} done={done} setDone={setDone} icons={icons} setIcons={setIcons} validValue={validValue} countHits={countHits} setCountHits={setCountHits}/>
+              <Card item={flashCards[2]} key={2} numb={3} done={done} setDone={setDone} icons={icons} setIcons={setIcons} validValue={validValue} countHits={countHits} setCountHits={setCountHits}/>
+              <Card item={flashCards[3]} key={3} numb={4} done={done} setDone={setDone} icons={icons} setIcons={setIcons} validValue={validValue} countHits={countHits} setCountHits={setCountHits}/>
           </div>
-          <Bottom done={done} allRight={allRight} icons={icons} setDone={setDone} setIcons={setIcons} setAllRight={setAllRight} cards={flashCards}/>
+          <Bottom done={done} icons={icons} setDone={setDone} setIcons={setIcons} cards={flashCards} validValue={validValue} countHits={countHits}/>
       </div>
   )
 }

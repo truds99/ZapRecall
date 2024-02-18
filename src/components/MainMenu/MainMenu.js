@@ -29,7 +29,7 @@ const [inputValue, setInputValue] = useState('');
     <div className='mainMenu'>
       <img src={logo} alt="Logo" />
       <h1>ZapRecall</h1>
-      <input className={`goals`} type='text' placeholder='zaps target (1 to 4)' onChange={handleChange}></input>
+      <input className={`goals`} type='text' placeholder='hits target (1 to 4)' onChange={handleChange}></input>
       <Link to={goalsIsValid ? '/content' : undefined} className={`startRecall ${goalsIsValid}`}>
         Start Recall!
       </Link>
