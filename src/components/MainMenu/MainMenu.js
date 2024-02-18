@@ -38,8 +38,6 @@ const [selected, setSelected] = useState('');
     });
   }
 
-  
-
   return (
     <div className='mainMenu'>
       <img src={logo} alt="Logo" />
