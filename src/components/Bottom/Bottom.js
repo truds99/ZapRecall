@@ -10,8 +10,8 @@ export default function Bottom({done, countHits, icons, cards, validValue}){
     }
 
     return (
-        <div className={`bottom ${done === 4 ? "bigger" : ''}`}>
-            {done === 4 ? 
+        <div className={`bottom ${done === 8 ? "bigger" : ''}`}>
+            {done === 8 ? 
                 (countHits >= validValue ?
                     <>  
                         <div className='messageTitle'>
@@ -29,9 +29,9 @@ export default function Bottom({done, countHits, icons, cards, validValue}){
                     </>
                 ) : ''
             }
-            {done}/4 ANSWERED
+            {done}/8 ANSWERED
             {icons ? <div className='icons'>{icons}</div> : ''}
-            {done === 4 ? <Link to='/' className='button' onClick={restart}>Restart recall</Link> : ''}
+            {done === 8 ? <Link to='/' className='button' onClick={restart}>Restart recall</Link> : ''}
         </div>
     )
 }

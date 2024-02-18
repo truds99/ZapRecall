@@ -33,7 +33,7 @@ const [selected, setSelected] = useState('');
     const enteredValue = event.target.value;
     setInputValue((prevValue) => {
         setInputValue(enteredValue);
-        setGoalsIsValid(enteredValue > 0 && enteredValue < 5 && enteredValue % 1 === 0);
+        setGoalsIsValid(enteredValue > 0 && enteredValue < 9 && enteredValue % 1 === 0);
         return enteredValue;
     });
   }
@@ -47,7 +47,7 @@ const [selected, setSelected] = useState('');
         <option value="deckPTBR">PT-BR deck React</option>
         <option value="deckEn">English deck React</option>
       </select>
-      <input className={`goals`} type='text' placeholder='hits target (1 to 4)' onChange={handleChange}></input>
+      <input className={`goals`} type='text' placeholder='hits target (1 to 8)' onChange={handleChange}></input>
       <Link to={goalsIsValid && selected!=="default" && selected ? '/content' : undefined} className={`startRecall ${goalsIsValid && selected!=="default" && selected}`}>
         Start Recall!
       </Link>
