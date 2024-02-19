@@ -1,6 +1,6 @@
 import logo from '../../assets/logo.png';
 import './MainMenuStyle.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
 
@@ -11,6 +11,24 @@ export default function MainMenu({ setValidValue, setValidDeck }) {
   const [inputValue, setInputValue] = useState('');
   const [selected, setSelected] = useState('');
   const [linkOpen, setLinkOpen] = useState(false);
+  let navigate = useNavigate();
+  
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === 'Enter' && linkOpen) {
+        navigate('/content');
+      }
+    };
+  
+    if (linkOpen) {
+      document.addEventListener('keydown', handleKeyPress);
+    }
+  
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [linkOpen, navigate]);
+  
     
   useEffect(() => {
     if(goalsIsValid){
@@ -28,6 +46,9 @@ export default function MainMenu({ setValidValue, setValidDeck }) {
     goalsIsValid && selected!=="default" && selected ? setLinkOpen(true) : setLinkOpen(false);
   }, [goalsIsValid, selected]);
   
+  
+  
+
   function setOption (event) {
     setSelected((prevState) => event.target.value);
   }
@@ -51,7 +72,7 @@ export default function MainMenu({ setValidValue, setValidDeck }) {
         <option value="deckEn">English deck React</option>
       </select>
       <input className={`goals`} type='text' placeholder='hits target (1 to 8)' onChange={handleChange}></input>
-      <Link to={linkOpen ? '/content' : undefined} className={`startRecall ${goalsIsValid && selected!=="default" && selected}`}>
+      <Link to={linkOpen ? '/content' : undefined} className={`startRecall ${linkOpen}`}>
         Start Recall!
       </Link>
     </div>
