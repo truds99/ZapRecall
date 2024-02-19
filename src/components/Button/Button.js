@@ -1,7 +1,16 @@
 import './ButtonStyle.css'
 
-export default function Button({
-    color, text, done, setDone, isAnswered, setIsAnswered, isOpen, setIsOpen, setIsRight}) {
+export default function Button
+    ({  color, 
+        text, 
+        done, 
+        setDone, 
+        isAnswered, 
+        setIsAnswered, 
+        isOpen, 
+        setIsOpen, 
+        setIsRight
+    }) {
 
     function userAnswer(option) {
         setDone(done + 1);

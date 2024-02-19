@@ -64,9 +64,29 @@ export default function Content ({ validValue, setValidValue, selectedDeck }) {
               <h1>ZapRecall</h1>
           </div>
           <div className='cards'>
-              {selectedDeck.map((elm, idx) => <Card item={elm} key={idx} numb={idx+1} done={done} setDone={setDone} icons={icons} setIcons={setIcons} validValue={validValue} countHits={countHits} setCountHits={setCountHits}/>)}
+              {selectedDeck.map((elm, idx) => 
+                  <Card
+                    item={elm}
+                    key={idx}
+                    numb={idx+1} 
+                    done={done} 
+                    setDone={setDone} 
+                    icons={icons} 
+                    setIcons={setIcons} 
+                    validValue={validValue} 
+                    countHits={countHits} 
+                    setCountHits={setCountHits}/>)
+              }
           </div>
-          <Bottom done={done} icons={icons} setDone={setDone} setIcons={setIcons} cards={selectedDeck} validValue={validValue} countHits={countHits}/>
+          <Bottom 
+            done={done} 
+            icons={icons} 
+            setDone={setDone} 
+            setIcons={setIcons} 
+            cards={selectedDeck} 
+            validValue={validValue} 
+            countHits={countHits}
+          />
       </div>
   )
 }

@@ -4,7 +4,17 @@ import Button from '../Button/Button'
 import { useState, useEffect } from 'react';
 
 
-export default function Card ({item, numb, done, setDone, icons, countHits, setCountHits, setIcons, validValue}) {
+export default function Card 
+    ({  item, 
+        numb, 
+        done, 
+        setDone, 
+        icons, 
+        countHits, 
+        setCountHits, 
+        setIcons
+    }){
+    
     const [isOpen, setIsOpen] = useState(false);
     const [isTapped, setIsTapped] = useState(false);
     const [isAnswered, setIsAnswered] = useState(false);

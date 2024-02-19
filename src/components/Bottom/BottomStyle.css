@@ -57,8 +57,8 @@ ion-icon.textgreen {
 }
 
 .bottom .button{
-    width: 167px;
-    height: 32px;
+    width:275px;
+    height: 40px;
     min-width: 167px;
     border-radius: 5px;
     font-family: Recursive;
@@ -92,6 +92,10 @@ ion-icon.textgreen {
     text-align: center;
 }
 
+.bottom .button {
+    min-width: 250px;
+    height: 40px;
+}
 
 }
 
