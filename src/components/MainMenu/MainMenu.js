@@ -7,10 +7,11 @@ import { useState, useEffect } from 'react';
 
 export default function MainMenu({ setValidValue, setValidDeck }) {
 
-const [goalsIsValid, setGoalsIsValid] = useState(false);
-const [inputValue, setInputValue] = useState('');
-const [selected, setSelected] = useState('');
-
+  const [goalsIsValid, setGoalsIsValid] = useState(false);
+  const [inputValue, setInputValue] = useState('');
+  const [selected, setSelected] = useState('');
+  const [linkOpen, setLinkOpen] = useState(false);
+    
   useEffect(() => {
     if(goalsIsValid){
         setValidValue(inputValue);
@@ -23,11 +24,13 @@ const [selected, setSelected] = useState('');
     }
   })
 
+  useEffect (() => {
+    goalsIsValid && selected!=="default" && selected ? setLinkOpen(true) : setLinkOpen(false);
+  }, [goalsIsValid, selected]);
   
   function setOption (event) {
     setSelected((prevState) => event.target.value);
   }
-
   
   function handleChange(event) {
     const enteredValue = event.target.value;
@@ -48,11 +51,9 @@ const [selected, setSelected] = useState('');
         <option value="deckEn">English deck React</option>
       </select>
       <input className={`goals`} type='text' placeholder='hits target (1 to 8)' onChange={handleChange}></input>
-      <Link to={goalsIsValid && selected!=="default" && selected ? '/content' : undefined} className={`startRecall ${goalsIsValid && selected!=="default" && selected}`}>
+      <Link to={linkOpen ? '/content' : undefined} className={`startRecall ${goalsIsValid && selected!=="default" && selected}`}>
         Start Recall!
       </Link>
     </div>
   );
-
-    
 }
