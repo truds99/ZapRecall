@@ -40,10 +40,10 @@ const Wrapper = styled.div`
   margin-bottom: 6px;
   text-align: center;
   overflow: hidden;
-  background-color: ${(props) =>
-    props.$color === "red"
+  background-color: ${({$color}) =>
+      $color === "red"
       ? "#FF3030"
-      : props.$color === "green"
+      : $color === "green"
       ? "#2FBE34"
       : "#FF922E"};
 

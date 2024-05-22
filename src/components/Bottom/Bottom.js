@@ -54,10 +54,10 @@ const Wrapper = styled.div`
   left: 0;
   color: #333333;
   width: 100vw;
-  height: ${props => props.$done === 8 ? '244px' : '102px'};
+  height: ${({$done}) => $done === 8 ? '244px' : '102px'};
   display: flex;
   flex-direction: column;
-  justify-content: ${props => props.$done === 8 ? 'space-around' : 'center'};
+  justify-content: ${({$done}) => $done === 8 ? 'space-around' : 'center'};
   align-items: center;
   font-size: 32px;
   font-family: Recursive;
