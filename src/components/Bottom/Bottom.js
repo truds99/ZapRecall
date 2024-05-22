@@ -106,6 +106,23 @@ const Wrapper = styled.div`
     min-height: 31px;
   }
 
+  & ion-icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .red {
+    color: #FF3030;
+  }
+
+  .green {
+    color: #2FBE34;
+  }
+
+  .yellow {
+    color: #FF922E;
+  }
+
   @media (max-width: 800px) {
 
     min-height: 70px;

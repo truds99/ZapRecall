@@ -22,7 +22,7 @@ export default function Card
   
     useEffect(() => {
         if (isAnswered) {
-            setIcons([...icons, <ion-icon key={icons.length} class={`text${isRight}`} name={isRight === "red" ? "close-circle" : isRight === "yellow" ? "help-circle" : "checkmark-circle"}></ion-icon>]);
+            setIcons([...icons, <ion-icon key={icons.length} class={isRight} name={isRight === "red" ? "close-circle" : isRight === "yellow" ? "help-circle" : "checkmark-circle"}></ion-icon>]);
         }
         if (isRight === 'green' || isRight === 'yellow') {
             setCountHits(countHits + 1);
@@ -30,7 +30,6 @@ export default function Card
     }, [isAnswered, isRight]);
 
     return (
-
         <Wrapper $isAnswered={isAnswered} $isRight={isRight} $isOpen={isOpen} $isTapped={isTapped} >
             <div>{isTapped ? item.answer : item.question}</div>
             <div>
@@ -145,7 +144,7 @@ const Wrapper = styled.div`
             min-height: 40px;
         }
 
-        & p{
+        & p {
             font-size: 16px;
         }
 

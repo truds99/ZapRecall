@@ -1,4 +1,4 @@
-import './ContentStyle.css';
+import styled from 'styled-components';
 import Card from '../Card/Card'
 import logo from '../../assets/logo-pequeno.png'
 import React from 'react';
@@ -58,12 +58,12 @@ export default function Content ({ validValue, setValidValue, selectedDeck }) {
   const [countHits, setCountHits] = useState(0);
 
   return (
-      <div className='content'>
-          <div className='title'>
+      <Wrapper>
+          <div>
               <img src={logo}/>
               <h1>ZapRecall</h1>
           </div>
-          <div className='cards'>
+          <div>
               {selectedDeck.map((elm, idx) => 
                   <Card
                     item={elm}
@@ -87,9 +87,82 @@ export default function Content ({ validValue, setValidValue, selectedDeck }) {
             validValue={validValue} 
             countHits={countHits}
           />
-      </div>
+      </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+    background-color: #FB6B6B;
+    height: calc(100% - 102px);
+    padding: 0 38px;
+    font-family: Recursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+
+    * {
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    & > :nth-child(1) {
+        overflow-y: hidden;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 85%;
+        max-width: 500px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    & > :nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 270px;
+    }
+
+    & h1 {
+        font-size: 53px;
+        overflow: hidden;
+        color: white;
+    }
+
+    & > :nth-child(1) > img {
+        width: 75px;
+        height: 87px;
+    }
+
+    @media (max-width: 800px) {
+
+        & > :nth-child(1) {
+            margin-top: 40px;
+        }
+
+        & h1{
+            font-size: 36px;
+        }
+
+        & > :nth-child(1) > img {
+            width: 52px;
+            height: 60px;
+        }
+
+        & > :nth-child(2) {
+            margin-top: 18px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 270px;    
+        }
+
+    }
+
+
+`
 
 
 
