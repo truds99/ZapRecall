@@ -2,6 +2,8 @@
 
 An easy to use flashcards web application.
 
+<img src="/src/assets/Gravar_2024_05_23_03_40_28_78-ezgif.com-video-to-gif-converter.gif" />
+
 Try it out now at https://project8-zap-recall-indol.vercel.app
 
 This is a React web application for you to use flashcards to learn whatever you want. Below are the implemented features:
